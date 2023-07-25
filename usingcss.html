@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USING CSS</title>
+    <link rel="stylesheet" href="style.css">
     <style>
+        .external{
+            color: ;
+        }
     p{
         color:blue;
         font-size:aquamarine;
@@ -15,19 +19,29 @@
         font-size:40px;
         text-decoration: underline ;
     }
+    .myclass2{
+        text-align: right;
+    }
 }
 #myid{
     font-size:70px;
     background-color:red;
-    color:white;
+    color:white !important;
 }
     </style>
 </head>
 <body>
     <h1 style="color:red; font size:50px">inline CSS is use to style ind. elements</h1>
+
     <p>internal css is used to apply css on entire page at once</p>
+
     <p class="my class">name selector r use to element by btheir tags</p>
-    <h3 class="my class">class selector r use to select elementas by their class name </h3>
-    <p id="myid" style="blue">ID selectors are used to select elements uniquely  id name</p>
+
+    <h3 class="myclass myclass2">class selector r use to select elementas by their class name </h3>
+
+    <p>id="myid" style="blue">ID selectors are used to select elements uniquely  id name</p>
+
+    <p class="external">External CSS are use to apply css on multiple pages at once</p>
+
 </body>
 </html>
