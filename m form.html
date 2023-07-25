@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Ticket form</title>
+    <style>
+        body{
+background-color: darkslategray;
+            color: lightblue;
+            font-style: oblique;
+            
+        }
+        h1{
+            font-style: oblique;
+            color: bisque;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Movie Ticket Booking Form</h1>
+    <hr>
+    <label>Full name</label>
+    <input type="text" placeholder=PriyaGupta minlength="4"  maxlength="10" required>
+    <br><br>
+    <label>Email address</label>
+    <input type="email" required>
+    <br><br>
+    <label>contact no.</label>
+    <input type="number">
+    <br><br>
+    <label>City</label>
+    <input type="text" list="City">
+
+    <datalist id="City">
+        <option>Gorakhpur</option>
+        <option>Lucknow</option>
+        <Option>Varanasi</Option>
+        <option>Kanpur</option>
+    </datalist>
+    <br><br>
+    <label>No. of tickets for adults</label>
+    <input type="number" min="1">
+    <br><br>
+    <label>No. of tickets for children</label>
+    <input type="number" min="1">
+    <br><br>
+    <label>Seat Type</label>
+    <select>
+        <option>Lower</option>
+        <option>Middle</option>
+        <option>Balcony</option>
+    </select>
+    <br><br>
+    <label>Select Date</label>
+    <input type="Date">
+    <br><br>
+    <label>Movie Time</label>
+    <input type="Time">
+    <br><br>
+    <label>Movie name</label>
+    <select>
+        <option>Shamshera</option>
+        <option>Jalebi</option>
+        <option>3 Idiots</option>
+        <option>Charlie 777</option>
+    </select>
+    <br><br>
+    <label>Payment Mode</label>
+    <Select>
+        <option>By Cash</option>
+        <option>Paytm</option>
+        <option>UPI</option>
+    </Select>
+    <br><br>
+    <label>Verification<sup>*</sup></label>
+    <button>I'm not a robot</button>
+    <br><br>
+    <pre><button>Submit</button>         <button>Reset</button></pre>
+    <br>
+    
+    <label>Gender</label>
+    <input type="radio" name="Gender">maLE
+    <input type="radio" name="gender">female
+    <p><b>Contact us for more query-<button>+9123456789</button></b></p>
+    <br>
+    
+    <hr>
+    <details>
+        <summary>Terms and Conditions</summary>
+        
+    <p>Lorem ipsum dolor sit<mark>Priya Gupta</mark> amet consectetur adipisicing elit. Voluptatum ipsum deleniti, omnis repudiandae
+            eligendi nisi adipisci. Incidunt consequatur libero sequi pariatur, dolorem eveniet explicabo. Earum
+            obcaecati quos id odio iusto?</p>
+    </details>
+    <br>
+    <input type="checkbox"> I accept terms and conditions
+    <hr>
+    <br><br>
+
+    <em><b>Enjoy Your Movie</b></em>
+
+    <br><br>
+
+
+
+
+</body>
+
+</html>

@@ -10,13 +10,16 @@
     <hr>
     <form >
         <label>Full name</label>
-        <input type="text">
+        <input type="text" required minlength="6" maxlength="56" >
         <br><br>
         <label>Email Address</label>
-        <input type="email"> 
+        <input type="email" required > 
         <br><br> 
         <label>Date Of Birth</label>
         <input type="Date">
+        <br><br>
+        <label>Age</label>
+        <input type="number" min="0" max="78" >
         <br><br>
         <label>Address</label>
         <br><br>
@@ -39,7 +42,7 @@
             <option>ICSE</option>
 
         </datalist>
-        
+        <br><br>
     
 
         <button>submit</button>                                           
