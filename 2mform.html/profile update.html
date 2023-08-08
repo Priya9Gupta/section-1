@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile update Form</title>
+    <style>
+        body{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        font-style: inherit;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-attachment: fixed;
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw8Ml3scseI6kEa9LW0gIwpk9CkpT_nHTxKlAJXwVEJlFAhPMusr1WKJlGgluJXIranpk&usqp=CAU); }
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 50px;
+        }
+    .fdiv{
+/* border: 2px solid black; */
+width: 60%;
+height: auto;
+margin-top: 100px;
+margin-right: 100px; 
+padding: 50px; 
+background-color:black;
+color: white;
+opacity:85%;
+}
+.myipt{
+    width: 250px;
+    border-radius: 3px;
+    
+}
+.cbtn{
+    background-color: blue;
+    color: white;
+    width: 100px;
+    height: 30px;
+    float: left;
+}
+.d2btn{
+    width: 200px;
+    height:30px;
+    border-radius: 7px;
+}
+.sdiv{
+    background-color: black;
+    padding: 50px;
+    margin-top: 150px;
+    width: 30%;
+    height: auto;
+    margin-top: 100px;
+    margin-left: 100px;
+    opacity: 85%;
+}
+.p1para{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    display: block;
+}
+.p2para{
+    color: white;
+    text-align: center;
+}
+.cimg{
+    width: 170px;
+    height:170px;
+    align-content: center;
+}
+.m2btn{
+    background-color: blue;
+    color: white;
+}
+   </style>
+</head>
+<body>
+
+    <div class="main">
+    <div class="sdiv">
+        <img class="cimg" src="data:image/png;base64,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" alt="">
+        <h3 class="p1para" >XYZ</h3>
+        <p class="p2para">Front End Developer</p>
+        <button class="d2btn"><b>Home</b></button><br><br>
+        <button class="d2btn"><b>About</b></button><br><br>
+        <button class="d2btn"><b>Education</b></button><br><br>
+        <button class="d2btn"><b>Contact</b></button><br><br>
+        <button class="d2btn"><b>Portfolio</b></button><br><br>
+    </div>
+    <div class="fdiv">
+     <h2>Edit Profile Form</h2>
+     <b><hr></b>
+ <label for=""><b>First Name <sup>*</sup></b></label>
+    <br>
+    <input class="myipt" type="text" required placeholder="first name">
+    <br><br>
+    <label for=""><b>Last Name <sup>*</sup></b></label><br>
+    <input class="myipt"type="text" required placeholder="last name">
+    <br><br>
+    <label for=""><b>E-mail <sup>*</sup></b></label><br>
+    <input class="myipt" type="email" required >
+    <br><br><label for=""><b>Current Password</b></label><br>
+    <input class="myipt" type="password"><br><br>
+    <b>Upload a photo</b><br><br>
+    <button class="cbtn">Choose File</button><br><br>
+    <label for=""><b>Change Password</b></label><br>
+    <input class="myipt" type="password"><br><br>
+    <label for=""><b>Confirm Password</b></label><br>
+    <input class="myipt" type="password"><br><br>
+    <pre><button class="m2btn">Update Profile</button>       Create</pre>
+    
+    </div>
+    </div>
+</body>
+</html>
