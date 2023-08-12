@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev.to clone</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <style>
+        
+        *{
+            margin: 0;
+            padding: 0;
+            font-family:Arial;
+        }
+        .card{
+            width: 100%;
+            height: 60px;
+            /* border-bottom: 2px solid black; */
+            background-color: white;
+            display: flex;
+            /* border-top: 2px solid black; */
+            align-items: center;
+            justify-content: space-between;
+        }
+        body{
+            height: 100vh;
+            background-image: linear-gradient(90deg,rgba(0, 0, 255, 0.219),white);
+            background-repeat: no-repeat;
+            
+        }
+        
+        .card img{
+            height: 40px;
+            width: 60px;
+            margin-top: 7px;
+            margin-left: 40px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+        }
+        .card .material-icons{
+            cursor: pointer;
+        }
+       .header_left .material-icons{
+        margin-right: 10px;
+       }
+        .btn{
+            display: flex;
+            align-items: center;
+            width: 500px;
+            height: 40px;
+            border-radius: 5px;
+            text-align: left;
+            font-size: large;
+            margin-top:7px ;
+            justify-content:space-between;
+            margin-left: 10px;
+            /* background-color: white; */
+            border: black;
+        }
+        .search{
+            margin-left: 10px;
+        }
+       .header_left{
+            display: flex;
+            border: black;
+        }
+        .btn2{
+          width: 150px;
+          height: 40px; 
+          border-radius: 5px; 
+          border: 2px solid blue;
+            border-radius: 5px;
+            color: blue;
+            margin-left: 20px;
+            
+            font-size: large;
+        }
+        .btn2:hover{
+           background-color: #3B49DF;
+           text-decoration: underline;
+           color: white;
+        }
+        .header_right{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-around;
+            font-size: x-large;
+            font-weight: 800;
+            margin-right: 50px;
+        }
+        .header_right_para{
+            font-weight: 500;
+            color: #404040;
+        }
+        /* .para{
+            margin-right: 30px;
+        } */
+        .sidebar{
+         /* border: 2px solid black; */
+         border-radius: 5px;
+         background-color: white;
+         width: 270px;
+         height: 350px;   
+         padding: 30px 20px 20px 30px;
+         margin-top: 20px;
+         margin-left: 60px;
+         
+        }
+        .btn_3{
+          width:250px ;
+          height: 60px;  
+          border-radius: 5px;
+          border: 2px SOLID #3B49DF;
+          color: #3B49DF;
+          padding: 7PX 15PX;
+          font-size: larger;
+          margin-bottom: 20px;
+          background-color: transparent;
+        }
+        .para_3{
+            font-size: larger;
+            margin-bottom: 10px;
+        }
+        .main_body{
+            display: flex;
+            flex-direction: row;
+        }
+        .log_in{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            font-size: 1.3rem;
+        
+        }
+        .sec_div{
+           /* border: 2px solid black; */
+           margin-left: 60px;
+           background-color: transparent;
+           width: 250px;
+           margin-top: 10px;
+           height:344px ;
+           padding: 15px;
+        }
+        .img_first{
+            width:30px ;
+            height: 30px;
+            margin-bottom: 1px;
+            }
+        .img_second{
+            width:30px ;
+            height: 30px;
+            background-color: transparent;
+            
+            margin-bottom: 1px;
+        }
+        .img_third{
+            width:30px ;
+            height: 30px; 
+            background-color: transparent; 
+            
+            margin-bottom: 1px;
+        }
+        .img_fourth{
+            width:30px ;
+            height: 30px;
+            color: blue;
+            background-color: transparent;
+            margin-bottom: 1px;
+        } 
+        .img_fifth{
+            width:30px ;
+            height: 30px;
+            color: blue;
+            background-color: transparent;
+            margin-bottom: 1px;
+        }
+        .img_btn{
+            font-size: large;
+            background-color: transparent;
+            border: grey; 
+            /* margin: 3px; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-evenly;
+            width: auto;
+            height: 35px;
+        }
+        .img_btn:hover{
+            background-color: #3b49df77;
+            text-decoration: underline;
+            color: white;
+        }
+        .home{
+            margin: 15px;
+        }
+        .rlist{
+         margin: 15px;   
+        }
+        .listing{
+         margin: 15px;   
+        }
+        .podcast{
+         margin: 15px;   
+        }
+        .videos{
+         margin: 15px;   
+        }
+       .main_head{
+        display: flex;
+        position: fixed;
+        top: 0;
+        margin-top: 60px;
+        margin-left: 400px;
+        /* width: 810px; */
+       }
+        .header_upper_para{
+            height: 65px;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            font-size:x-large;
+        }
+        .header{
+            height:900px ;
+           /* width: 800px; */
+           border-bottom: 5px solid blue; 
+           display: flex;
+           flex-direction: column;
+           margin-top: 20px;
+           background-color: white;
+        /* align-items: center; */
+        /* flex-direction: column; */
+        }
+        .header_upper{
+          height: 65px;
+          width: 800px;
+           /* border: 2px solid red; */
+           background-color:transparent;
+           display: flex;
+           justify-content: space-between;
+           padding: 10px 10px 10px 10px;
+           /* padding-right: 300px; */}
+
+        .relevant_para{
+            font-weight: bold;
+            font-size: x-large;
+           margin-left: 5px;
+           margin-top: 15px;
+        }
+        .para_head1{
+            font-size: x-large;
+            color: dimgrey;
+            margin-top: 15px;
+            margin-left: 30px;
+        }
+        .himg{
+        height: 325px;
+        width:820px ;
+        border-bottom:4px  #3B49DF;
+       } 
+       .header_down{
+        width:815px;
+        height: 350px;
+        /* border: 3px solid black; */
+       }
+      .account_down{
+        width: 815px;
+        height: 70px;
+        /* border: 2px solid red; */
+        display: flex;
+        margin-top: 10px;
+       }
+       .p_img{
+        width: 40px;
+        height: 40px;
+        margin-left: 25px;
+        margin-top: 15px;
+        cursor: pointer;
+       }
+       
+       .heart_img{
+       height: 40px;
+       width: 40px;
+       }
+       .aeroplane_img{
+        height: 40px;
+       width: 40px;
+       }
+       .fire_img{
+        height: 40px;
+       width: 40px;
+       }
+       .image_div{
+        /* border: 2px solid blue; */
+        width: 815px;
+        height: 70px;
+        display: flex;
+        justify-content:space-evenly;
+        align-items: center;
+       }
+       .img_div{
+        width: 200px;
+        height: 70px;
+        /* border: 2px solid green; */
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding-top: 10px;
+        
+       }.para_head2{
+        margin-top: 0px;
+        color: #404040;
+       }
+       .heading{
+        display: flex;
+        justify-content: left;
+        align-items: start;
+        margin-left: 70px;
+        margin-top: 35px;
+       }
+       .hash{
+        height: 70px;
+        width: 815px;
+        /* border: 2px solid red; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 70px;
+        font-size: large;
+        color: dimgrey;
+       }
+       .aug_div{
+        width: 100px;
+        height: 70px;
+        border: 2px solid black;
+        display: flex;
+        color: dimgrey;
+       }
+       .mdiv{
+        width: 150px;
+        height: 70px;
+        /* border: 2px solid blue; */
+        display: flex; 
+        align-items: center;
+        color:black;
+        padding-left: 10px;
+        /* padding-right: 10px;  */
+        font-weight: 400;
+        padding-left: 10px;
+       }
+       ._div{
+        margin-right: 10px;
+       }
+       ._div{
+        width: 200px;
+        height: 70px;
+        /* border: 2px solid blue; */
+        display: flex;
+        justify-content: end;
+        /* align-items: center; */
+        color:black ;
+        font-weight: 400;
+        padding-left: 10px;
+         padding-right: 10px; 
+         padding-top: 35px; 
+       }
+      ._div .material-icons{
+        padding-right: 40px;
+        color: black;
+        padding-left:10px ;
+       }
+      
+       .rec_div{
+        margin-top:15px;
+        }
+       .b_name{
+        margin-top: 20px;
+        font-size: larger;
+        padding-left: 20px;
+       }
+       .date{
+        margin-top: 35px;
+        font-size: 15px;
+         color: dimgrey;
+         
+       }
+      .sidebar_right{
+        border: 2px rgba(128, 128, 128, 0.788);
+        width: 400px;
+        height: 1000px;
+        margin-top: 20px;
+        margin-left: 20px;
+        /* margin-right: 20px; */
+        font-family:Arial ;
+        border-radius: 10px;
+        background-color: white;
+        padding-left: 15px;
+        padding-right: 10px;
+
+      }
+      /* .plane_img{
+        width: 30px;
+        height: 30px;
+        padding-top: 15px;
+        padding-left: 15px; */
+      /* } */
+      .plant_img{
+        width: 40px;
+        height: 40px; 
+        margin-top: 0px; 
+        display: inline;
+      } 
+      .sidebar_right_heading{
+        border-bottom: 1px solid rgba(128, 128, 128, 0.589);
+        width: auto;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .see_all{
+        margin-right: 40px;
+        color: #3B49DF;
+        text-decoration: underline;
+        font-size: large;
+      }
+      .fdiv{
+        height: 80px;
+        width: 350px;
+        /* border: 2px solid black; */
+        font-size: larger;
+        color: rgba(0, 0, 0, 0.836);
+        padding-top: 10px;
+        padding-bottom: 20px;
+      }
+      .sdiv{
+        height: 80px;
+        width: 350px;
+        /* border: 2px solid black; */
+        font-size: larger;
+        color: rgba(0, 0, 0, 0.836);
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+     .tdiv{
+        height: 80px;
+        width: 350px;
+        /* border: 2px solid black; */
+        font-size: larger;
+        color: rgba(0, 0, 0, 0.836);
+        padding-top: 10px;
+        padding-bottom: 10px;   
+     }
+     .fourth_div{
+        height: 80px;
+        width: 350px;
+        /* border: 2px solid black; */
+        font-size: larger;
+        color: rgba(0, 0, 0, 0.836);
+        padding-top: 10px;
+        padding-bottom: 10px;    
+     }
+     .fifth_div{
+        height: 40px;
+        width: 350px;
+        /* border: 2px solid black; */
+        font-size: larger;
+        color: rgba(0, 0, 0, 0.836);
+        padding-top: 10px;
+        padding-bottom: 10px; 
+     }
+     .sixth_div{
+        height: 80px;
+        width: 350px;
+        /* border: 2px solid black; */
+        font-size: larger;
+        color: rgba(0, 0, 0, 0.836);
+       
+
+     }
+     .ultimate{
+        padding-left: 30px;
+        padding-top: 10px;
+     }
+     .pre{
+        font-size: large;  
+     }
+     .ben_div{
+        margin-top: 17px;
+        margin-left: 15px;
+        font-size: larger;
+     }
+     .august_div{
+        font-size: medium;
+     }
+      </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header_left">
+            <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="">
+            <BUTTON class="btn"><p class="search">search...</p>
+                <span class="material-icons">search</span>
+            </BUTTON>
+        </div>
+        <div class="header_right">
+         <p class="header_right_para">Log in</p><button class="btn2">Create account</button> 
+        </div>
+    </div>
+    <!-- main body starts -->
+    <div class="main_body">
+        <div class="sidebar">
+        <h2>DEV Community is a community of 1,114,387 amazing developers</h2><br>
+        <p class="para_3">We're a place ehere coders share, stay up-to-date and grow their careers</p><br>
+         <div ><button class="btn_3"><b> Create account </b></button></div> 
+        <p class="log_in">Log in</p>
+        <div class="sec_div">
+            <button class="img_btn"><img class="img_first" src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-4/256/home-icon.png" alt=""><p class="home">Home</p></button><br>
+            
+            <button class="img_btn"> <img class="img_second" src="https://cdn.dribbble.com/users/125948/screenshots/3177962/reading-list-icon.png" alt=""><p class="rlist">Reading list </p></button><br>
+      
+          <button class="img_btn"><img class="img_third" src="data:image/png;base64,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" alt=""><p class="listing">Listings</p><br> </button> <br>
+          
+          <button class="img_btn"><img class="img_fourth" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRavzAqx80mNqlFPLlxq27CqsynAiHyA7uj7w&usqp=CAU" alt=""><p class="podcast">Podcasts</p></button><br>
+
+          <button class="img_btn"><img class="img_fifth" src="https://w7.pngwing.com/pngs/1018/361/png-transparent-video-cameras-computer-icons-video-production-video-icon-angle-rectangle-logo.png" alt=""><p class="videos">Videos</button><br>
+          </div>
+  
+        </div>
+    
+     <!-- header start -->
+     <div class="header">
+         <div class="header_upper">
+           <p class="relevant_para">Relevant</p>
+           <p class="para_head1">Latest</p>
+           <div class="header_upper_para"><p  class="para_head2">Top</p></div>
+          </div>
+          <img class="himg"src="https://res.cloudinary.com/practicaldev/image/fetch/s--vgyXm_h7--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hc8ms0a1u8uz1d7bdvzv.jpg" alt="">
+          
+          
+         <div class="header_down">
+           <div class="account_down">
+          <img class="p_img" src="https://cdn-icons-png.flaticon.com/512/61/61205.png" alt="">
+           
+           <pre class="ben_div">Ben Halpern
+<p class="august_div">Aug 6</p>
+           </pre>
+           </div>
+           <h1 class="heading">AWS Lambda</h1>
+           <div class="hash">
+            <pre>#aws     #beginners     #newbie      #hasanelsherbiny</pre>
+           </div>
+           <div class="image_div">
+           <div class="img_div">
+            <img class="heart_img" src="https://img.icons8.com/?size=1x&id=91339&format=png" alt="">
+            <img class="aeroplane_img" src="https://w7.pngwing.com/pngs/439/455/png-transparent-airplane-cartoon-travel-plane-s-comics-text-cartoonist.png" alt="">
+            <img class="fire_img" src="https://png.pngtree.com/png-vector/20190226/ourmid/pngtree-fire-logo-icon-design-template-vector-png-image_705402.jpg" alt="">
+            <p class="rec_div">3 reactions</p>
+        </div>
+           <div class="mdiv">
+           <span class="material-icons">message</span>Add comment
+           </div>
+           <div class="_div">
+         <p>3 min read</p><span class="material-icons">message</span>
+        </div>
+        </div>
+        </div>
+        </div>
+          <div class="sidebar_right">
+        <div class="sidebar_right_heading">
+            <h1>Listings</h1><br>
+            <p class="see_all">See all</p><hr>
+        </div>
+        <div class="fdiv">
+         <pre class="pre">Learn React & Next.js and boost up 
+boost your career 
+            <!-- <img class="plane_img" src="https://static.vecteezy.com/system/resources/previews/024/501/926/non_2x/isolated-colorful-airplane-icon-in-sticker-style-vector.jpg" alt=""> -->
+education</pre>
+            <!-- <img class="plane_img" src="https://static.vecteezy.com/system/resources/previews/024/501/926/non_2x/isolated-colorful-airplane-icon-in-sticker-style-vector.jpg" alt=""> -->
+       </div><hr>
+        <div class="sdiv">
+            <pre class="pre">IDURAR Open Source ERP /CRM <br>Alternativeto SalesForce
+        
+ products</pre>
+        </div><hr>
+        <div class="tdiv">
+            <pre class="pre">Join the Godot Community and Contribute <br>Today!
+        
+collaps</pre>
+        </div><hr>
+        <div class="fourth_div">
+            <pre class="pre">SolveSum - Math Games for iOS and <br>Android         
+
+products</pre>
+        </div><hr>
+        <div class="sdiv">
+            <pre class="pre">IDURAR Open Source ERP /CRM <br>Alternativeto SalesForce
+        
+ products</pre>
+        </div><hr>
+        <!-- <div class="fifth_div"> 
+        <img class="plant_img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOuRmUnzp8NN5mhsZCRszyMnZH8J-yVs73Jg&usqp=CAU" alt="">
+        <pre class="ultimate">An Ultimate Hub for <br> Developer and Resources</pre>
+       
+products</pre></div>  -->
+     <div class="sixth_div" >
+        <pre class="pre">SolveSum - Math Games for iOS and <br>Android 
+    
+products</pre>
+       </div> 
+     </div>
+     
+</div>
+
+</body>
+</html> 

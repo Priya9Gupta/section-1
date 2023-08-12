@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+      .card{
+        transform-style: preserve-3d;
+       transform: perspective(1000px);
+       /* background-color: aqua; */
+      }
+      .card_body{
+        transform: translateZ(50px);
+      }
+      .my-img{
+        height: 350px;
+        /* object-fit:cover; */
+        object-fit:contain;
+
+      }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</style>
+  </head>
+
+<body>
+  <header class="bg-dark text-white">
+    <div class="container py-5" style="perspective: 500px;">
+      <!-- perespective is used to create 3d image -->
+      <h1 class="fw-bold display-4 text-center page-title">Best Camera offers</h1>
+      <h3 class="text-cener" class="sub_title"> deserunt recusandae consequuntur ad amgfhrhfn kskjeh  quibusdam odit cumque porro </h3>
+        <div class="input-group mt-5 w-75 mx-auto my-input">
+          <input class="form-control" type="text">
+          <button class="btn btn-primary"><i class="fa fa-search" aria hidden="true"></i></button>
+        </div>
+
+    </div>
+  </header>
+  <section class="container row mt-5">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <img class="card-img-top my-img"
+            src="https://m.media-amazon.com/images/I/61EXU8BuGZL._AC_UL320_.jpg"
+            alt="">
+          <div class="card-body ">
+            <p class="fw-bold h4 text-muted">INSTAx</p>
+            <h3>Mini9Camera</h3>
+
+            <p>
+              <i class="fa-solid fa-star text-warning"></i>4.5 stars from 1000+ reviews
+            </p>
+            <h2>₹4,9999</h2>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary w-50"><i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+            <button class="btn btn-outline-secondary "><i class="fa-solid fa-bolt"></i>Buy now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card">
+          <img class="card-img-top my-img"
+            src="https://m.media-amazon.com/images/I/71MU4Yq--ZL._SY450_.jpg"
+            alt="">
+          <div class="card-body ">
+            <p class="fw-bold h4 text-muted">INSTAx</p>
+            <h3>Mini9Camera</h3>
+            <p>
+              <i class="fa-solid fa-star text-warning"></i>4.5 stars from 1000+ reviews
+            </p>
+            <h2>₹4,9999</h2>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary w-50"><i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+            <button class="btn btn-outline-secondary "><i class="fa-solid fa-bolt"></i>Buy now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card">
+          <img class="card-img-top my-img"
+            src="https://m.media-amazon.com/images/I/71yofUBMxSL._SX679_.jpg"
+            alt="">
+          <div class="card-body ">
+            <p class="fw-bold h4 text-muted">INSTAx</p>
+            <h3>Mini9Camera</h3>
+            <p>
+              <i class="fa-solid fa-star text-warning"></i>4.5 stars from 1000+ reviews
+            </p>
+            <h2>₹4,9999</h2>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary w-50"><i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+            <button class="btn btn-outline-secondary "><i class="fa-solid fa-bolt"></i>Buy now</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-4">
+        <div class="card">
+          <img class="card-img-top my-img"
+            src="https://m.media-amazon.com/images/I/61d4hVRb+dS._SY450_.jpg"
+            alt="">
+          <div class="card-body ">
+            <p class="fw-bold h4 text-muted">INSTAx</p>
+            <h3>Mini9Camera</h3>
+            <p>
+              <i class="fa-solid fa-star text-warning"></i>4.5 stars from 1000+ reviews
+            </p>
+            <h2>₹4,9999</h2>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary w-50"><i class="fa-solid fa-cart-shopping"></i>Add to cart</button>
+            <button class="btn btn-outline-secondary "><i class="fa-solid fa-bolt"></i>Buy now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script>
+    ScrollReveal().reveal('.page-title', {
+      delay: 300,
+      origin: "bottom",
+      distance: "30px",
+      duration:4000,
+      rotate: {
+        x: -90,
+        y: 0,
+        z: 0,
+      },
+    }
+    );
+    ScrollReveal().reveal('.sub_title', {
+      delay: 300,
+      origin: "bottom",
+      distance: "30px",
+      duration:1000,
+      rotate: {
+        x: -90,
+        y: 0,
+        z: 0,
+      },
+    }
+    );
+    ScrollReveal().reveal('.my-input', {
+      delay: 200,
+      origin: "right",
+      distance: "100px",
+      duration:1000,
+      
+    }
+    );
+    ScrollReveal().reveal('.card', {
+      delay: 200,
+      origin: "bottom",
+      distance: "50px",
+      duration:1000,
+      interval:200,
+    }
+    );
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js" integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  VanillaTilt.init( document.querySelectorAll(".card"),{
+max:5,
+speed:1000,
+// glare:true,
+
+  });
+</script>
+</body>
+
+</html>
