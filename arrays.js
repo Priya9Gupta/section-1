@@ -17,7 +17,7 @@ console.log(movies);
 
 // indexing element
 console.log(movies[4]);
-
+console.log([-4])   //not works
 // negative indexing
 console.log(movies.at(-4));
 
